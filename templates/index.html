@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/date.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <title>日期计算器</title>
+</head>
+<body>
+    <div id="container">
+        <p>今天是{{ today }},距</p>
+        <form method="POST">
+            <input type="text" name="year" required autocomplete="off" value="{{ year }}"> 年
+            <input type="text" name="month" required autocomplete="off" value="{{ month }}"> 月
+            <input type="text" name="day" required autocomplete="off" value="{{ day }}"> 日
+            <input class="btn" type="submit" name="submit" value="计算">
+        </form>
+        <p>还有 <span>{{ days }}</span> 天</p>
+        {% for mes in get_flashed_messages() %}
+            <div class="alert">{{ get_flashed_messages()[0] }}</div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
