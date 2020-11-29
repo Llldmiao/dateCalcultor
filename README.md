@@ -10,3 +10,5 @@
 - ✔ 若输入日期存在问题则会提示
 ---
 ## 启动: 在dateCalcultor 目录下打开命令行，执行`. env/Scripts/activate`激活对应python环境，然后执行`flask run`，即可启动
+
+## 效果图：![](/static/images/preview.jpg)
